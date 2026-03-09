@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        #calculator {
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI Calculator</h1>
+    <input type="text" id="input" placeholder="Enter your expression here">
+    <button onclick="calculate()">Calculate</button>
+    <div id="result"></div>
+    <script>
+        function calculate() {
+            const input = document.getElementById('input').value;
+            // Simulated AI calculation (for demonstration)
+            let result;
+            try {
+                result = eval(input);
+            } catch (e) {
+                result = 'Error: Invalid input';
+            }
+            document.getElementById('result').innerText = 'Result: ' + result;
+        }
+    </script>
+</body>
+</html>
